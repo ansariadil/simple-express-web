@@ -1,0 +1,21 @@
+extends layout
+ 
+block content
+  .container
+   form(method='post', action='contact/send')
+    h1 Contacts Us
+    .form-group
+      lable Name
+      input.form-control(type='text',name='name', placeholder='Enter Name', autocomplete="off", required)
+    .form-group
+      lable Email
+      input.form-control(type='email',name='email', placeholder='email@xyz.com',autocomplete="off", required)
+    .form-group
+      lable Phone
+      input.form-control(type='tel',name='phone', placeholder='10 digit phone Number', pattern="[7-9]{1}[0-9]{9}", required)
+    .form-group
+      lable Message
+      textarea.form-control(name='message', placeholder='Enter Message', autocomplete="off", required)
+    button.btn.btn-primary(type='submit') Submit
+    | &nbsp&nbsp&nbsp&nbsp&nbsp
+    button.btn.btn-primary(type='reset') Reset
